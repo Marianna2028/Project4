@@ -7,7 +7,8 @@ var updateView = async (button) => {
     if(button.dataset.querytype == 'by_name') {
    let queryValue = document.querySelector('#nameQuery').value;
 
-   api = `http://localhost:3000/api/by_name/${queryValue}`;
+api = `/api/by_name/${queryValue}`;
+
 }
 else if 
     (button.dataset.querytype == 'by_age') {
@@ -15,7 +16,7 @@ else if
    let queryEndAge = document.querySelector('#endAgeQuery').value; //end age value
 
 
-   api = `http://localhost:3000/api/by_age/${queryStartAge}/${queryEndAge}`; //constructing api url with age range parameters
+   api = `/api/by_age/${queryStartAge}/${queryEndAge}`; //constructing api url with age range parameters
 }
 
 //fetch data from api
